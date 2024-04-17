@@ -1,0 +1,25 @@
+.checkerboard {
+  display: inline-block;
+}
+
+.board-row {
+  display: flex;
+}
+
+.piece {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+}
+
+.W {
+  background-color: #fff;
+}
+
+.B {
+  background-color: #000;
+}
+
+.king {
+  border: 4px solid gold;
+}
