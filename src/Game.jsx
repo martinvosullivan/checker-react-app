@@ -1,5 +1,28 @@
 import React, { useState } from "react";
 
+const RuleBook = () => {
+  // Define your rules here
+  const rules = [
+    "The game is played on an 8x8 grid.",
+    "Players place their pieces on the dark squares of the board.",
+    "The game is played on an 8x8 grid.",
+    "The game is played on an 8x8 grid.",
+    "The game is played on an 8x8 grid.",
+    // Add more rules as needed
+  ];
+
+  return (
+    <div className="rule-book">
+      <h3>Checkers Rules</h3>
+      <ul>
+        {rules.map((rule, index) => (
+          <li key={index}>{rule}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
 const CheckersGame = ({ onStartGame }) => {
   const [player1, setPlayer1] = useState({ name: "", color: "" });
   const [player2, setPlayer2] = useState({ name: "", color: "" });
@@ -19,6 +42,7 @@ const CheckersGame = ({ onStartGame }) => {
 
   return (
     <div>
+      <RuleBook />
       <h2>Checkers Game</h2>
       <form onSubmit={handleSubmit}>
         <div>
