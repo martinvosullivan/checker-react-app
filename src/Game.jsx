@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 
+import RulesAPI from "./RulesAPI";
+
 const RuleBook = () => {
   // Define your rules here
   const rules = [
     "The game is played on an 8x8 grid.",
     "Players place their pieces on the dark squares of the board.",
-    "The game is played on an 8x8 grid.",
-    "The game is played on an 8x8 grid.",
-    "The game is played on an 8x8 grid.",
+    "Pieces can only move diagonally on the dark squares.",
+    "A piece eats an opponent's piece when it jumps it and lands on an empty space.",
+    "Players can move up and down diagonally when a piece becomes King.",
+    "A piece becomes King when it reaches the end of the board.",
+    "A player wins when they eat all of the opponent's pieces.",
     // Add more rules as needed
   ];
 
@@ -40,9 +44,12 @@ const CheckersGame = ({ onStartGame }) => {
     onStartGame(); // Call to Start Game
   };
 
+  //
+  //
+  //<RuleBook />
   return (
     <div>
-      <RuleBook />
+      <RulesAPI />
       <h2>Checkers Game</h2>
       <form onSubmit={handleSubmit}>
         <div>
